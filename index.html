@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Storyboard MPI Matematika — Pengurangan sampai 10</title>
+<style>
+:root{--navy:#17324d;--blue:#3d7ee8;--yellow:#ffd65a;--mint:#bff3df;--pink:#ffd6e7;--ink:#20334a}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Trebuchet MS,sans-serif;background:linear-gradient(135deg,#e7f5ff,#fff5d8);color:var(--ink)}
+header{background:var(--navy);color:#fff;padding:18px max(18px,calc((100vw - 1080px)/2));display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+main{max-width:1080px;margin:24px auto;padding:0 16px 42px}.panel{background:#fff;border-radius:24px;padding:clamp(18px,4vw,34px);box-shadow:0 10px 28px #17324d16}
+h1,h2,h3{color:var(--navy);margin-top:0}h1{font-size:clamp(2rem,5vw,3.3rem)}p,li{font-size:1.05rem;line-height:1.55}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.navbtn,.btn{border:0;border-radius:12px;padding:12px 15px;font-weight:800;cursor:pointer}.navbtn{background:white;color:var(--navy)}.btn{background:var(--blue);color:#fff}.btn.alt{background:var(--yellow);color:var(--navy)}.btn.light{background:#e8f1ff;color:var(--navy)}
+.hidden{display:none!important}.tag{display:inline-block;background:var(--yellow);padding:6px 12px;border-radius:99px;font-weight:bold;margin-bottom:10px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}.heroart{background:var(--mint);border-radius:22px;padding:24px;text-align:center;font-size:3.5rem;min-height:200px;display:grid;place-content:center}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.card{background:#f0f7ff;border:2px solid #dceaff;border-radius:18px;padding:16px}.small{font-size:.9rem;color:#586c80}.objects{font-size:2.5rem;min-height:64px;margin:16px 0;line-height:1.6}.math{font-size:clamp(2.4rem,7vw,4rem);font-weight:900;text-align:center;color:var(--navy);margin:14px}
+.answers{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.answer{background:#fff;border:3px solid #dce8fa;border-radius:15px;padding:18px;font-size:1.5rem;font-weight:900;cursor:pointer}.answer:hover{background:#fff3c0}.feedback{font-weight:bold;min-height:30px;margin-top:14px}.progress{height:10px;background:#e2eafa;border-radius:20px;overflow:hidden}.progress span{display:block;height:100%;background:#39c795;width:0}
+footer{text-align:center;color:#5b6e80;padding:18px}
+@media(max-width:650px){.hero{grid-template-columns:1fr}.heroart{min-height:120px}.answers{gap:6px}.answer{padding:14px 4px}}
+</style></head>
+<body>
+<header><strong>📚 STORYBOARD MPI MATEMATIKA KELAS 1</strong><span>SD Negeri 6 Pakue Utara · Kurikulum Merdeka · Fase A</span></header>
+<main>
+<nav id="nav" class="hidden">
+<button class="navbtn" onclick="show('home')">🏠 Beranda</button>
+<button class="navbtn" onclick="show('story')">🗂 Storyboard</button>
+<button class="navbtn" onclick="show('demo')">🎮 Demo MPI</button>
+<button class="navbtn" onclick="show('assets')">🖼 Aset & Variabel</button>
+</nav>
+<section id="home" class="panel">
+<div class="hero"><div><span class="tag">Rancangan siap ditinjau</span><h1>Pengurangan sampai 10</h1><p>Storyboard layar demi layar untuk Media Pembelajaran Interaktif Matematika kelas 1 SD. Paket ini memuat alur aplikasi, rancangan antarmuka, daftar aset, triggers, variabel, serta demo interaktif sederhana.</p><div class="row"><button class="btn" onclick="show('story')">Lihat Storyboard →</button><button class="btn alt" onclick="show('demo')">Coba Demo 🎮</button></div><p class="small">Catatan kurikulum: kelas 1 SD berada pada Fase A, bukan Fase C.</p></div><div class="heroart">🍎 🍎 🍎<br>➖<br>⭐ 🎈 🧸</div></div>
+</section>
+<section id="story" class="panel hidden">
+<span class="tag">1 · Skenario alur aplikasi</span><h2>Alur dari pembukaan hingga selesai</h2>
+<div class="cards">
+<div class="card"><h3>01. Splash Screen</h3><p>Judul, ilustrasi matematika, nama sekolah, tombol “Mulai”.</p><p><b>Trigger:</b> klik Mulai → Menu Utama.</p></div>
+<div class="card"><h3>02. Menu Utama</h3><p>Pilihan Belajar, Latihan, Kuis, Petunjuk, Profil.</p><p><b>Trigger:</b> pilih menu → layar terkait.</p></div>
+<div class="card"><h3>03. Tujuan Pembelajaran</h3><p>Anak memahami pengurangan sebagai mengambil sebagian benda dan menentukan sisa sampai 10.</p><p><b>Trigger:</b> tombol Lanjut → Apersepsi.</p></div>
+<div class="card"><h3>04. Apersepsi</h3><p>Ilustrasi 5 apel; 2 apel diambil. Anak menghitung sisa apel.</p><p><b>Trigger:</b> tombol “Ambil apel” mengurangi jumlah tampilan.</p></div>
+<div class="card"><h3>05. Materi Inti</h3><p>Animasi benda → kelompok yang diambil memudar → tampil simbol 5 − 2 = 3.</p><p><b>Trigger:</b> tombol Lihat Jawaban menampilkan hasil.</p></div>
+<div class="card"><h3>06. Latihan Interaktif</h3><p>Soal acak dengan gambar benda dan 3 opsi jawaban.</p><p><b>Trigger:</b> klik opsi → validasi jawaban dan umpan balik.</p></div>
+<div class="card"><h3>07. Kuis</h3><p>Lima soal pengurangan sampai 10, satu soal per layar.</p><p><b>Trigger:</b> pilih jawaban → kunci soal → tombol Berikutnya.</p></div>
+<div class="card"><h3>08. Hasil Belajar</h3><p>Skor, jumlah benar, pesan motivasi, tombol ulangi.</p><p><b>Trigger:</b> hitung skor; ulangi kuis atau ke menu.</p></div>
+<div class="card"><h3>09. Penutup</h3><p>Pesan “Hebat, kamu sudah belajar pengurangan!”</p><p><b>Trigger:</b> tombol Beranda kembali ke Menu Utama.</p></div>
+</div>
+<h2 style="margin-top:26px">Pola alur</h2><p><b>Splash → Menu → Tujuan → Apersepsi → Materi → Latihan → Kuis → Hasil → Penutup.</b> Peserta didik dapat kembali ke menu melalui tombol Beranda. Jika jawaban latihan salah, aplikasi memberi petunjuk dan kesempatan mencoba lagi.</p>
+</section>
+<section id="demo" class="panel hidden">
+<span class="tag">Demo interaktif</span><h2>Belajar pengurangan dengan benda</h2><p>Ada 5 apel. Tekan tombol untuk mengambil 1 apel setiap kali. Perhatikan jumlah apel yang tersisa.</p>
+<div class="math" id="demoMath">5 − 0 = 5</div><div class="objects" id="demoObjects">🍎 🍎 🍎 🍎 🍎</div>
+<div class="row"><button class="btn alt" onclick="removeApple()">Ambil 1 apel</button><button class="btn light" onclick="resetDemo()">Ulangi</button></div><div id="demoFeedback" class="feedback" aria-live="polite"></div>
+<hr style="border:0;border-top:1px solid #dbe5ef;margin:26px 0">
+<h2>Coba soal pengurangan</h2><div class="math" id="qmath">8 − 3 = ?</div><div class="objects" id="qobjects"></div><div class="answers" id="answers"></div><div id="qfeedback" class="feedback" aria-live="polite"></div><div class="row"><button class="btn" onclick="newQ()">Soal Baru ↻</button></div>
+</section>
+<section id="assets" class="panel hidden">
+<span class="tag">Panduan produksi</span><h2>Aset visual yang perlu disiapkan</h2>
+<div class="cards">
+<div class="card"><h3>Ilustrasi utama</h3><p>Karakter pemandu anak, apel/buah, bintang, pensil, bola, keranjang.</p><p class="small">Format PNG transparan atau SVG; gaya kartun konsisten.</p></div>
+<div class="card"><h3>Ikon antarmuka</h3><p>Beranda, kembali, lanjut, suara, ulangi, bantuan, centang, silang.</p><p class="small">Bentuk sederhana dan mudah dikenali.</p></div>
+<div class="card"><h3>Audio</h3><p>Narasi instruksi, efek jawaban benar, dan nada penyemangat.</p><p class="small">MP3/OGG, durasi singkat, volume konsisten.</p></div>
+<div class="card"><h3>Latar & tombol</h3><p>Latar cerah yang tidak ramai, tombol besar, font sans-serif yang mudah dibaca.</p><p class="small">Pastikan kontras warna cukup dan navigasi konsisten.</p></div>
+</div>
+<h2 style="margin-top:24px">Daftar variabel dan logika</h2>
+<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse"><thead><tr><th style="text-align:left;padding:10px;border-bottom:2px solid #dce5ef">Variabel</th><th style="text-align:left;padding:10px;border-bottom:2px solid #dce5ef">Tipe / fungsi</th></tr></thead><tbody>
+<tr><td style="padding:10px;border-bottom:1px solid #e5edf5"><code>currentScreen</code></td><td style="padding:10px;border-bottom:1px solid #e5edf5">Teks; menyimpan layar aktif.</td></tr>
+<tr><td style="padding:10px;border-bottom:1px solid #e5edf5"><code>totalBenda</code></td><td style="padding:10px;border-bottom:1px solid #e5edf5">Angka 0–10; jumlah awal objek.</td></tr>
+<tr><td style="padding:10px;border-bottom:1px solid #e5edf5"><code>jumlahDiambil</code></td><td style="padding:10px;border-bottom:1px solid #e5edf5">Angka 0–10; objek yang diambil.</td></tr>
+<tr><td style="padding:10px;border-bottom:1px solid #e5edf5"><code>jawabanBenar</code></td><td style="padding:10px;border-bottom:1px solid #e5edf5">Angka; hasil pengurangan yang benar.</td></tr>
+<tr><td style="padding:10px;border-bottom:1px solid #e5edf5"><code>skor</code></td><td style="padding:10px;border-bottom:1px solid #e5edf5">Angka; jumlah jawaban benar pada kuis.</td></tr>
+<tr><td style="padding:10px;border-bottom:1px solid #e5edf5"><code>nomorSoal</code></td><td style="padding:10px;border-bottom:1px solid #e5edf5">Angka 1–5; posisi soal kuis.</td></tr>
+<tr><td style="padding:10px"><code>sudahMenjawab</code></td><td style="padding:10px">Boolean; mencegah jawaban dihitung berulang.</td></tr>
+</tbody></table></div>
+<p><b>Logika validasi:</b> saat opsi dipilih, bandingkan nilai pilihan dengan <code>jawabanBenar</code>. Jika sama, tampilkan umpan balik positif dan tambahkan skor (khusus kuis). Jika salah, tampilkan petunjuk. Kunci pilihan setelah satu jawaban per soal.</p>
+</section>
+</main>
+<footer>MPI Matematika Kelas 1 · SD Negeri 6 Pakue Utara</footer>
+<script>
+const $=id=>document.getElementById(id);
+function show(id){document.querySelectorAll('main section').forEach(s=>s.classList.add('hidden'));$(id).classList.remove('hidden');$('nav').classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'});if(id==='demo'){resetDemo();newQ()}}
+let removed=0;
+function resetDemo(){removed=0;renderDemo();$('demoFeedback').textContent='Ayo hitung bersama!'}
+function renderDemo(){$('demoMath').textContent=`5 − ${removed} = ${5-removed}`;$('demoObjects').textContent='';for(let i=0;i<5;i++)$('demoObjects').textContent+=(i<5-removed?'🍎 ':'▫️ ')}
+function removeApple(){if(removed<5){removed++;renderDemo();$('demoFeedback').textContent=`Bagus! Sekarang tersisa ${5-removed} apel.`}else $('demoFeedback').textContent='Semua apel sudah diambil. Tekan Ulangi untuk mencoba lagi.'}
+let q={a:8,b:3,c:5},answered=false;
+function newQ(){let a=Math.floor(Math.random()*11),b=Math.floor(Math.random()*(a+1));q={a,b,c:a-b};answered=false;$('qmath').textContent=`${a} − ${b} = ?`;$('qobjects').textContent='';for(let i=0;i<a;i++)$('qobjects').textContent+=(i<a-b?'🟠 ':'▫️ ');$('qfeedback').textContent='';$('answers').innerHTML='';let set=new Set([q.c]);while(set.size<3)set.add(Math.max(0,Math.min(10,q.c+Math.floor(Math.random()*7)-3)));[...set].sort(()=>Math.random()-.5).forEach(n=>{let b=document.createElement('button');b.className='answer';b.textContent=n;b.onclick=()=>check(n);$('answers').appendChild(b)})}
+function check(n){if(answered)return;answered=true;document.querySelectorAll('#answers button').forEach(b=>b.disabled=true);$('qfeedback').textContent=n===q.c?'✅ Benar! Kamu hebat!':`Belum tepat. Jawaban yang benar adalah ${q.c}. Coba hitung benda yang tersisa.`;$('qfeedback').style.color=n===q.c?'#16885d':'#b44545'}
+</script></body></html>
